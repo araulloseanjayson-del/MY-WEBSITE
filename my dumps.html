@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RANDOM THINGS IN MY GALLERY</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* Body & Background */
+body {
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background: linear-gradient(to right, #89f7fe, #66a6ff);
+}
+
+/* Header */
+header {
+    text-align: center;
+    color: white;
+    padding: 4rem 1rem;
+    background: rgba(0, 123, 255, 0.8);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Sticky Navbar */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: #ffffff;
+    color: #007BFF;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #007BFF;
+    color: white;
+}
+
+/* Collection Sections */
+.collection {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 40px 20px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s;
+}
+
+.collection:hover {
+    transform: translateY(-5px);
+}
+
+.collection h2 {
+    text-align: center;
+    color: #007BFF;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Gallery Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.gallery figure {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.gallery figure:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.gallery img {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery figure:hover img {
+    transform: scale(1.05);
+}
+
+/* Caption with icons and hover effects */
+figcaption {
+    text-align: center;
+    padding: 12px 15px;
+    background: linear-gradient(135deg, #ffffff, #f1f3f6);
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-top: 3px solid #007BFF;
+    transition: transform 0.3s, background 0.3s, color 0.3s;
+}
+
+figcaption:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #007BFF, #66a6ff);
+    color: white;
+}
+
+figcaption span.icon {
+    font-size: 1.3rem;
+}
+
+/* Top Button */
+.top-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    padding: 14px 20px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    transition: background 0.3s;
+}
+
+.top-btn:hover {
+    background: #0056b3;
+}
+
+/* Section background variety */
+#collection1 { background: rgba(255, 255, 255, 0.95); }
+#collection2 { background: rgba(255, 250, 240, 0.95); }
+#collection3 { background: rgba(240, 255, 245, 0.95); }
+#collection4 { background: rgba(255, 245, 245, 0.95); }
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>My Photo Gallery</h1>
+</header>
+
+<nav>
+    <a href="#collection1">Animals</a>
+    <a href="#collection2">Dream Bikes</a>
+    <a href="#collection3">Foods</a>
+    <a href="#collection4">Sceneries</a>
+</nav>
+
+<!-- Animals -->
+<section class="collection" id="collection1">
+    <h2>Animals</h2>
+    <div class="gallery">
+        <figure>
+            <a href="animals/IMG_20251209_083552.jpg"><img src="animals/IMG_20251209_083552.jpg" alt="Cute Puppy"></a>
+            <figcaption><span class="icon">🐶</span> My tired dog after absolutely nothing</figcaption>
+        </figure>
+        <figure>
+            <a href="animals/IMG_20251213_085252.jpg"><img src="animals/IMG_20251213_085252.jpg" alt="Beautiful Cat"></a>
+            <figcaption><span class="icon">🐱</span> My dog after eating too much</figcaption>
+        </figure>
+        <figure>
+            <a href="animals/IMG_20251226_200150.jpg"><img src="animals/IMG_20251226_200150.jpg" alt="Bird in Flight"></a>
+            <figcaption><span class="icon">🐈</span> A random cat I found while jogging</figcaption>
+        </figure>
+        <figure>
+            <a href="animals/IMG_20260107_181355.jpg"><img src="animals/IMG_20260107_181355.jpg" alt="Golden Retriever"></a>
+            <figcaption><span class="icon">🐕</span> UP cat</figcaption>
+        </figure>
+        <figure>
+            <a href="animals/IMG_20260107_181357.jpg"><img src="animals/IMG_20260107_181357.jpg" alt="Wild Deer"></a>
+            <figcaption><span class="icon">🐾</span> The same UP cat</figcaption>
+        </figure>
+    </div>
+</section>
+
+<!-- Dream Bikes -->
+<section class="collection" id="collection2">
+    <h2>Dream Bikes</h2>
+    <div class="gallery">
+        <figure>
+            <a href="dream bike/images (15).jpeg"><img src="dream bike/images (15).jpeg" alt="Sport Bike"></a>
+            <figcaption><span class="icon">🏍️</span> Ducati Streetfighter</figcaption>
+        </figure>
+        <figure>
+            <a href="dream bike/images (16).jpeg"><img src="dream bike/images (16).jpeg" alt="Classic Bike"></a>
+            <figcaption><span class="icon">🏍️</span> BMW</figcaption>
+        </figure>
+        <figure>
+            <a href="dream bike/images (17).jpeg"><img src="dream bike/images (17).jpeg" alt="Mountain Bike"></a>
+            <figcaption><span class="icon">🏍️</span> KAWASAKI</figcaption>
+        </figure>
+        <figure>
+            <a href="dream bike/images (18).jpeg"><img src="dream bike/images (18).jpeg" alt="Custom Bike"></a>
+            <figcaption><span class="icon">🏍️</span> BMW</figcaption>
+        </figure>
+        <figure>
+            <a href="dream bike/OIP.jpg"><img src="dream bike/OIP.jpg" alt="Custom Bike Side"></a>
+            <figcaption><span class="icon">🏍️</span> YAMAHA</figcaption>
+        </figure>
+    </div>
+</section>
+
+<!-- Foods -->
+<section class="collection" id="collection3">
+    <h2>Foods</h2>
+    <div class="gallery">
+        <figure>
+            <a href="foods/FB_IMG_1764340473859.jpg"><img src="foods/FB_IMG_1764340473859.jpg" alt="Delicious Burger"></a>
+            <figcaption><span class="icon">🍰</span> DESERTS</figcaption>
+        </figure>
+        <figure>
+            <a href="foods/IMG_20251123_214611.jpg"><img src="foods/IMG_20251123_214611.jpg" alt="Pizza"></a>
+            <figcaption><span class="icon">🎂</span> CAKE</figcaption>
+        </figure>
+        <figure>
+            <a href="foods/IMG_20251213_214104.jpg"><img src="foods/IMG_20251213_214104.jpg" alt="Sushi"></a>
+            <figcaption><span class="icon">🍝</span> BAKED MAC</figcaption>
+        </figure>
+        <figure>
+            <a href="foods/IMG_20251226_224515.jpg"><img src="foods/IMG_20251226_224515.jpg" alt="Dessert"></a>
+            <figcaption><span class="icon">🍟</span> AIR FRY FRIES</figcaption>
+        </figure>
+        <figure>
+            <a href="foods/IMG_20260211_185959.jpg"><img src="foods/IMG_20260211_185959.jpg" alt="Fruits"></a>
+            <figcaption><span class="icon">☕</span> COFFE</figcaption>
+        </figure>
+    </div>
+</section>
+
+<!-- Sceneries -->
+<section class="collection" id="collection4">
+    <h2>Sceneries</h2>
+    <div class="gallery">
+        <figure>
+            <a href="sceneries/IMG_20260107_174901.jpg"><img src="sceneries/IMG_20260107_174901.jpg" alt="Mountain View"></a>
+            <figcaption><span class="icon">🌄</span> Sunken garden</figcaption>
+        </figure>
+        <figure>
+            <a href="sceneries/IMG_20260114_183729.jpg"><img src="sceneries/IMG_20260114_183729.jpg" alt="Beach"></a>
+            <figcaption><span class="icon">🏖️</span> QC circle</figcaption>
+        </figure>
+        <figure>
+            <a href="sceneries/IMG_20260201_000255.jpg"><img src="sceneries/IMG_20260201_000255.jpg" alt="Forest"></a>
+            <figcaption><span class="icon">🌳</span> Antipolo</figcaption>
+        </figure>
+        <figure>
+            <a href="sceneries/IMG_20260205_074815.jpg"><img src="sceneries/IMG_20260205_074815.jpg" alt="Lake"></a>
+            <figcaption><span class="icon">🏞️</span> UE Manila</figcaption>
+        </figure>
+        <figure>
+            <a href="sceneries/IMG_20260210_195316.jpg"><img src="sceneries/IMG_20260210_195316.jpg" alt="Cityscape"></a>
+            <figcaption><span class="icon">🌆</span> Antipolo</figcaption>
+        </figure>
+    </div>
+</section>
+
+<button class="top-btn" onclick="window.scrollTo({top:0, behavior:'smooth'});">Go Top</button>
+
+</body>
+</html>
